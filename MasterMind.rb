@@ -158,7 +158,9 @@ class ComputerGame < HumanGame
     while turn <= 12 
       puts "", "Turn number: #{turn}", "", "Press return to continue"
       gets
-      
+      # if a previous computer guess response had 3 Os, keep basing new guesses from the
+      # first such guess that got those 3 Os.
+      # likewise for guesses that had 2 Os (but 3 O guesses take precedence).
       if @three_found
         to_guess = @three_answer
       elsif @two_found
