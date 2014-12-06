@@ -151,7 +151,7 @@ class ComputerGame < HumanGame
   
   def gameStart
     puts "", "The computer has 12 chances to break your code.", ""
-    running_feedback = "\n"
+    running_feedback = ""
     prev = nil
     prev_response = nil
     turn_copy = 0
